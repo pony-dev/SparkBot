@@ -29,7 +29,7 @@ void setup()
 
 }
 
-/* This function loops forever --------------------------------------------*/
+/* This function loops forever --------------------------------------------
 void loop()
 {
     if (digitalRead(rbump) == HIGH){
@@ -44,6 +44,7 @@ void loop()
     }
     
 }
+*/
 
 /* Motor control functions *****************************************************/
 
