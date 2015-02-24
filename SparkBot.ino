@@ -23,28 +23,17 @@ void setup()
   pinMode(leftMotorEnable, OUTPUT);
   pinMode(rightMotorDir, OUTPUT);
   pinMode(rightMotorEnable, OUTPUT);
-  
+
   pinMode(led, OUTPUT);
   pinMode(rbump, INPUT);
 
 }
 
-/* This function loops forever --------------------------------------------
+// This function loops forever
 void loop()
 {
-    if (digitalRead(rbump) == HIGH){
-      digitalWrite(led, HIGH);
-      delay(100);
-      digitalWrite(led, LOW);
-      delay(100);
-    }
-    else{
-      digitalWrite(led, HIGH);
-      stop();
-    }
-    
+
 }
-*/
 
 /* Motor control functions *****************************************************/
 
@@ -101,18 +90,18 @@ void left()
 float getVoltage()
 {
 	int sensor_value;
-	int sum;  
+	int sum;
 	// read the analog in value:
 	for (int i = 0;i < 20;i ++) //Continuous sampling 20 times
 	{
-		sensor_value = analogRead(IR_PROXIMITY_SENSOR); 
+		sensor_value = analogRead(IR_PROXIMITY_SENSOR);
 		sum += sensor_value;
 	}
 	sensor_value = sum / 20;
 	float voltage;
 	voltage = (float)sensor_value*ADC_REF/1024;
 	return voltage;
-} 
+}
 
 /*******************************************************************************
  * Function Name  : rcCarControl
