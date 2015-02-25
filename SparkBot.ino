@@ -29,7 +29,7 @@ void setup()
 
 }
 
-// This function loops forever
+/* This function loops forever --------------------------------------------*/
 void loop()
 {
 
